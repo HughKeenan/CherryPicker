@@ -75,9 +75,7 @@ The dashboard contains the following pages:
 
 ### Content
 
-- The text for the Home page was taken from Wikipedia Article A.
-- Instructions on how to implement form validation on the Sign-Up page were taken from [Specific YouTube Tutorial](https://www.youtube.com/).
-- The icons in the footer were taken from [Font Awesome](https://fontawesome.com/).
+- Information on powdery midlew was taken from https://en.wikipedia.org/wiki/Powdery_mildew
 
 ### Media
 
