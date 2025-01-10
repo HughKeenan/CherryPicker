@@ -1,0 +1,31 @@
+# Dataset
+inputs/cherry_leaves_dataset/cherry-leaves/test/healthy/*
+inputs/cherry_leaves_dataset/cherry-leaves/test/powdery_mildew/*
+inputs/cherry_leaves_dataset/cherry-leaves/train/healthy/*
+inputs/cherry_leaves_dataset/cherry-leaves/train/powdery_mildew/*
+
+# Development environment configuration files
+.gitpod.dockerfile
+.gitpod.yml
+
+# Python cache files and directories
+app_pages/__pycache__/*
+__pycache__/
+*.pyc
+*.pyo
+
+# Jupyter Notebooks
+jupyter_notebooks/
+
+# Markdown, log, and unnecessary system files
+*.md
+*.log
+.DS_Store
+
+# Virtual environment and editor settings
+venv/
+.vscode/
+
+# Test and temporary files
+.pytest_cache/
+.env
