@@ -29,3 +29,6 @@ venv/
 # Test and temporary files
 .pytest_cache/
 .env
+
+# Github files
+github/
