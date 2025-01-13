@@ -20,7 +20,21 @@ To save time in this process, the IT team suggested an ML system that detects in
 
 ## Hypothesis
 
-- Our hypothesis is that leaves where mildew is present show a pattern of pale spots on the leaf. We intend to validate this hypothesis by examining the data provided, and if all images marked as having mildew present show this characteristic, we may assume the hypothesis is validated.
+- Our hypothesis is that leaves where mildew is present show a pattern of pale spots on the leaf. 
+
+Powdery mildew presents itself as a pattern of white patches on leaves where the fungal infection is present.
+
+### Validation
+
+We intend to validate this by conducting a study of the image data provided by the client. We will create an average image of both healthy and infected leaves. Once compared we hope to be able to distinguish visually between the two using the ML model.
+
+The below images show a selection of healthy leaves:
+
+And leaves where powdery mildew is present:
+
+Below also are the average and variability images for both kinds of leaves.
+
+From the photographs, it appears that the hypothesis is correct and there is a visual difference. We may therefore consider the hypothesis validated.
 
 ## The rationale to map the business requirements to the Data Visualisations and ML tasks
 
