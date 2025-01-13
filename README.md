@@ -31,25 +31,33 @@ To save time in this process, the IT team suggested an ML system that detects in
 This is an issue of classification between healthy leaves and those infected with mildew. We can map the requirements to our data visualisation and ML tasks through [User Stories](https://github.com/users/HughKeenan/projects/8). Please see this link for further detail, but in summary, the following relate to requirement 1: 
 
 * As a data scientist I can collect & prepare data so that it can be used for analysis & training ML models.
-- To conduct an effective study, we must first acquire relevant data. The dataset acquired through Kaggle had to be downloaded, and then examined to ensure it contained no non-relevant data, for example as part of this process, a notebook was ran to remove any non-image files present in the dataset.
+To conduct an effective study, we must first acquire relevant data. The dataset acquired through Kaggle had to be downloaded, and then examined to ensure it contained no non-relevant data, for example as part of this process, a notebook was ran to remove any non-image files present in the dataset.
 
 * As an end user, I can review a page of project findings so that I can receive more detailed information on what conclusions the development team came to.
-- The image visualizer page of the dashboard shows the results of our study, including the average images for healthy and sick leaves, and the variability in images for both. The study found that there are visual differences between them. 
+The image visualizer page of the dashboard shows the results of our study, including the average images for healthy and sick leaves, and the variability in images for both. The study found that there are visual differences between them. 
 
 * As an end user I can view a page detailing the project hypothesis so that I can understand the reasoning behind the developer's analysis
-- We hypothesised at the outset that there was a visual difference in healthy and sick leaves, which was validated by our analysis.
+We hypothesised at the outset that there was a visual difference in healthy and sick leaves, which was validated by our analysis.
 
 2. The client is interested in predicting if a cherry leaf is healthy or contains powdery mildew.
 
 The client wanted a dashboard that would let them upload images of leaves to the site and have an accurate reading of whether they were healthy or sick. This requirement was considered in the below user story:
 
 * As an end user I can upload an image of a leaf so that I can learn if it is diseased or not. 
-- The mildew detector page enables the client to do this. They can upload images of the leaves which are then run through the ML model which can accurately predict whether or not powdery mildew is present.
+The mildew detector page enables the client to do this. They can upload images of the leaves which are then run through the ML model which can accurately predict whether or not powdery mildew is present.
 
 
 ## ML Business Case
 
-The client has requested a solution that will enable them to quickly and efficiently differentiate between healthy & diseased leaves. To provide this we will develop a ML model using a convolutional neural netwrok which has been trained to recognise both kinds of leaves. We may consider this successfully accomplished if it is capable of generating an image montage consisting of healthy or diseased leaves on request and if it can accurately determine the status of a leaf when uploaded to the dashboard.
+The client has requested a solution that will enable them to quickly and efficiently differentiate between healthy & diseased leaves. 
+
+The aim behind the ML task is to develop a ML model that is able to distinguish a cherry leaf that is healthy from one that has powdery mildew.
+
+The model will be trained to recognise the difference using a convolutional neural network. An ideal outcome to this would be a model that can predict with minimum 97% accuracy whether a leaf is infected or not, per the client's request. We may consider this successfully accomplished if it is capable of achieving an accuracy rating of at least 97% on the test dataset. If this is not accomplished, the model has failed.
+
+The relevance to the user of this kind of ML model output is that it may be relied upon to deliver trustworthy readings when presented with new data. In addition, the model will output visuals such as the average image for healthy and sick leaves, which will provide a useful reference to the users.
+
+The data is provided by the user and downloaded from Kaggle. It is split into train, test and validation subsets. It is confidential in nature and as such appropriate measures will be taken to protect it. It may only be downloaded from Kaggle if the data practitioner has the appropriate JSON key.
 
 ### CRISP-DM 
 
@@ -69,7 +77,7 @@ The dashboard contains the following pages:
 
 ### Heroku
 
-- The App live link is: `https://YOUR_APP_NAME.herokuapp.com/`
+- The App live link is: `https://cherry-picker-7809e87f232b.herokuapp.com/`
 - Set the runtime.txt Python version to a [Heroku-20](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
 - The project was deployed to Heroku using the following steps.
 
