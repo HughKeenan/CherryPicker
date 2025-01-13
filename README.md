@@ -7,7 +7,7 @@ The client, an agri-food business, is facing difficulties with an outbreak of po
 ## Dataset Content
 
 - The dataset is sourced from [Kaggle](https://www.kaggle.com/codeinstitute/cherry-leaves). 
-- The dataset contains +4 thousand images taken from the client's crop fields. The images show healthy cherry leaves and cherry leaves that have powdery mildew, a fungal disease that affects many plant species. The cherry plantation crop is one of the finest products in their portfolio, and the company is concerned about supplying the market with a compromised quality product.
+- The dataset contains over 4 thousand images taken from the client's crop fields. The images show healthy cherry leaves and cherry leaves that have powdery mildew, a fungal disease that affects many plant species. The cherry plantation crop is one of the finest products in their portfolio, and the company is concerned about supplying the market with a compromised quality product.
 
 ## Business Requirements
 
@@ -28,11 +28,23 @@ To save time in this process, the IT team suggested an ML system that detects in
 
 1. The client is interested in conducting a study to visually differentiate a healthy cherry leaf from one with powdery mildew.
 
-This is an issue of classification between healthy leaves and those infected with mildew. 
+This is an issue of classification between healthy leaves and those infected with mildew. We can map the requirements to our data visualisation and ML tasks through [User Stories](https://github.com/users/HughKeenan/projects/8). Please see this link for further detail, but in summary, the following relate to requirement 1: 
+
+* As a data scientist I can collect & prepare data so that it can be used for analysis & training ML models.
+- To conduct an effective study, we must first acquire relevant data. The dataset acquired through Kaggle had to be downloaded, and then examined to ensure it contained no non-relevant data, for example as part of this process, a notebook was ran to remove any non-image files present in the dataset.
+
+* As an end user, I can review a page of project findings so that I can receive more detailed information on what conclusions the development team came to.
+- The image visualizer page of the dashboard shows the results of our study, including the average images for healthy and sick leaves, and the variability in images for both. The study found that there are visual differences between them. 
+
+* As an end user I can view a page detailing the project hypothesis so that I can understand the reasoning behind the developer's analysis
+- We hypothesised at the outset that there was a visual difference in healthy and sick leaves, which was validated by our analysis.
 
 2. The client is interested in predicting if a cherry leaf is healthy or contains powdery mildew.
 
+The client wanted a dashboard that would let them upload images of leaves to the site and have an accurate reading of whether they were healthy or sick. This requirement was considered in the below user story:
 
+* As an end user I can upload an image of a leaf so that I can learn if it is diseased or not. 
+- The mildew detector page enables the client to do this. They can upload images of the leaves which are then run through the ML model which can accurately predict whether or not powdery mildew is present.
 
 
 ## ML Business Case
