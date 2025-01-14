@@ -126,6 +126,7 @@ This page displays the project hypothesis and  explaines the method by which it 
 This page shows the results of our analysis.The page explains how the dataset was used for testing purposes. It also shows the results of the ML model training, including graphics to show model accuracy and loss on the training and validation set, and an explanation of the graphs. It also shows how the model performed on the test set after it had been trained, and explains what that means for the business requirements.
 
 ## Unfixed Bugs
+During ML model training, a bug was encountered where data would run out during the second epoch.
 
 ## Deployment
 
@@ -143,13 +144,25 @@ This page shows the results of our analysis.The page explains how the dataset wa
 6. If the slug size is too large, then add large files not required for the app to the .slugignore file.
 
 ## Main Data Analysis and Machine Learning Libraries
-
+The main libraries used were: 
+* numpy 1.26.1 - used to convert information to arrays
+* pandas 2.1.1 - used for converting information to a dataframe and saving as such
+* matplotlib 3.4.0 - used to plot the distribution of datasets
+* seaborn 0.13.2 - used for making statistical graphics
+* plotly 5.10.0 - used for plotting results of ML model training
+* Pillow 10.0.1 - used to adjust images
+* streamlit 1.40.2 - used to create the dashboard's interface
+* scikit-learn 1.3.1 - used for model evaluation
+* tensorflow-cpu 2.16.1 - used for model creation
+* keras 3.0.0 - used to set hyperparameters for the model
 
 ## Credits
 
 ### Content
 
 - Information on powdery midlew was taken from https://en.wikipedia.org/wiki/Powdery_mildew
+- The dataset was created by Code institute and taken from [Kaggle](https://www.kaggle.com/codeinstitute/cherry-leaves)
+- The Malaria Walkthrough Project from Code Institute was used as a guide when assembling this project.
 
 ### Media
 
@@ -158,4 +171,4 @@ This page shows the results of our analysis.The page explains how the dataset wa
 
 ## Acknowledgements (optional)
 
-- Thank the people who provided support throughout this project.
+- I would like to acknowledge my mentor, Mo Shami, who provided valuable insights and guidance during the project.
