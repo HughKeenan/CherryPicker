@@ -81,6 +81,11 @@ The dashboard was made using streamlit and has been designed with clarity and ea
 
 1. Dashboard information 
 
+* General Information
+* Dataset Information
+* Link to project README 
+* Business Requirements
+
 This is the introductory page the user will see on accessing the dashboard. Its intended purpose is to provide a new user with essential information both general and specific, so that they may gain a full understanding of the project before proceeding to more technical pages.
 
 The general information provided is there to inform users about the nature of powdery mildew and its implications for the client's business, as well as the reason for the project's inception.
@@ -89,17 +94,34 @@ It also provides more specific information concerning the dataset and provides a
 
 2. Project Findings 
 
+* Business requirement 1
+* Checkbox 1 - Difference between average and variability image
+* Checkbox 2 - Differences between average healthy and average infected leaves
+* Checkbox 3 - Image Montage
+
 This page is intended to anwer buiness requirement 1: the client is interested in conducting a study to visually differentiate a healthy cherry leaf from one with powdery mildew. To this end it provides options for what the user may wish to see; it can display an image montage of healthy or infected leaves, as well as the results of an analysis of the images. The page displays the average image & variability image for healthy & diseased leaves as well as the differences between the average images for both and the difference between the variability images.
 
 3. Mildew Detector 
+
+* Business requirement 2
+* Link to Kaggle dataset
+* Widget to upload images for analyis
+* Link to download report in .csv format
 
 This page answers business requirement 2: the client is interested in predicting if a cherry leaf is healthy or contains powdery mildew. The page contains a link to the Kaggle page where an authorised user will here be able to download a clean dataset. It also allows a user to upload images of either kind of leaf to receive an analysis of its status.
 
 4. Project Hypothesis 
 
+* Project Hypothesis
+* Validation
+
 This page displays the project hypothesis and  explaines the method by which it was validated
 
 5. Performance Metrics 
+
+* Train, Validation and Test Set: Labels Frequencies
+* Model History
+* Generalised Performance on test set
 
 This page shows the results of our analysis.The page explains how the dataset was used for testing purposes. It also shows the results of the ML model training, including graphics to show model accuracy and loss on the training and validation set, and an explanation of the graphs. It also shows how the model performed on the test set after it had been trained, and explains what that means for the business requirements.
 
