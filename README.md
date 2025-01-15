@@ -73,7 +73,38 @@ The relevance to the user of this kind of ML model output is that it may be reli
 
 The data is provided by the user and downloaded from Kaggle. It is split into train, test and validation subsets. It is confidential in nature and as such appropriate measures will be taken to protect it. It may only be downloaded from Kaggle if the data practitioner has the appropriate JSON key.
 
-### CRISP-DM 
+## CRISP-DM 
+
+To effectively guide the development of this project, we adopt the Cross-Industry Standard Process for Data Mining (CRISP-DM), which provides a methodology over 6 steps:
+
+1. Business Understanding
+
+Before beginning data mining efforts, it is important to understand what the client expects to gain from them. This begins with setting business goals and examining where the client stands in relation to those at present. A plan must then be written out and goals set for data mining specifically.
+
+To meet this requirement, we have agreed business requirements with the client and prepared our [User Stories](https://github.com/users/HughKeenan/projects/8)
+
+2. Data Understanding
+
+Having completed step 1, we can look to the available data. Data must be collected and explored, and its quality must be verified. 
+
+Data was collected from Kaggle
+
+3. Data Preparation
+
+As it is unlikely that all data collected will be fit for purpose, it must next be prepared. This can take the form of removing irrelvant data or imputation of missing data, among other options
+
+4. Modelling
+
+Having processed the data, a machine learning model may be developed. An appropriate technique must be selected and tested with the available data. Different combinations of hyperparameters should be tried
+
+5. Evaluation
+
+The ML model should then be evaluated, against training and validation sets to determine accuracy, and then against the test set to see how it performs on unfamiliar data.
+
+6. Deployment
+
+Finally, it should be deployed on an appropriate platform
+
 
 ## Dashboard Design
 
