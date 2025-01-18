@@ -35,7 +35,7 @@ def project_summary_body():
     
 
     st.success(
-        f"There are 2 business requirements for this project:\n"
+        f"**Business Requirements**\n"
         f"* 1 - The client is interested in conducting a study to visually differentiate "
         f"a healthy cherry leaf from one with powdery mildew.\n"
         f"* 2 - The client is interested in predicting if a cherry leaf is healthy or contains powdery mildew. "

@@ -21,14 +21,19 @@ def image_visualizer_body():
       avg_healthy = plt.imread(f"outputs/{version}/avg_var_healthy.png")
       avg_powdery_mildew = plt.imread(f"outputs/{version}/avg_var_powdery_mildew.png")
 
+      st.image(avg_healthy, caption='Healthy Leaf - Average and Variability')
+      st.image(avg_powdery_mildew, caption='Infected Leaf - Average and Variability')
+      
       st.warning(
         f"* The images, particularly the variability images, do make it possible "
         f"to differentiate healthy and diseased leaves. " 
         f"The white spots created by the mildew create a pattern across the leaf that is visible in the "
-        f"variability image for diseased leaves")
+        f"variability image for diseased leaves.\n"
+        f"* Additionally, the average images show a difference in colour between" 
+        f" the healthy & infected leaves, with"
+        f" infected leaves being a lighter shade of green."
+        )
 
-      st.image(avg_healthy, caption='Healthy Leaf - Average and Variability')
-      st.image(avg_powdery_mildew, caption='Infected Leaf - Average and Variability')
       st.write("---")
 
     if st.checkbox("Differences between average healthy and average infected leaves"):
@@ -36,7 +41,7 @@ def image_visualizer_body():
 
           st.warning(
             f"* The study uncovered slight differences in "
-            f"patterns that allowed us to intuitively differentiate healthy & infected leaves.")
+            f"patterns that allowed us to differentiate healthy & infected leaves.")
           st.image(diff_between_avgs, caption='Difference between average images')
 
     if st.checkbox("Image Montage"): 
@@ -51,16 +56,12 @@ def image_visualizer_body():
       st.write("---")
 
 
-
 def image_montage(dir_path, label_to_display, nrows, ncols, figsize=(15,10)):
   sns.set_style("white")
   labels = os.listdir(dir_path)
 
-  # subset the class you are interested to display
   if label_to_display in labels:
 
-    # checks if your montage space is greater than subset size
-    # how many images in that folder
     images_list = os.listdir(dir_path+'/'+ label_to_display)
     if nrows * ncols < len(images_list):
       img_idx = random.sample(images_list, nrows * ncols)
@@ -72,13 +73,11 @@ def image_montage(dir_path, label_to_display, nrows, ncols, figsize=(15,10)):
       return
     
 
-    # create list of axes indices based on nrows and ncols
     list_rows= range(0,nrows)
     list_cols= range(0,ncols)
     plot_idx = list(itertools.product(list_rows,list_cols))
 
 
-    # create a Figure and display images
     fig, axes = plt.subplots(nrows=nrows,ncols=ncols, figsize=figsize)
     for x in range(0,nrows*ncols):
       img = imread(dir_path + '/' + label_to_display + '/' + img_idx[x])
