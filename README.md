@@ -18,9 +18,10 @@ To save time in this process, the IT team suggested an ML system that detects in
 - 1 - The client is interested in conducting a study to visually differentiate a healthy cherry leaf from one with powdery mildew.
 - 2 - The client is interested in predicting if a cherry leaf is healthy or contains powdery mildew.
 
-## Hypothesis
+## Hypotheses
 
-- Our hypothesis is that leaves where mildew is present show a pattern of pale spots on the leaf. 
+### Hypothesis 1
+Our first hypothesis is that leaves where mildew is present show a pattern of pale spots on the leaf. 
 
 Powdery mildew presents itself as a pattern of white patches on leaves where the fungal infection is present.
 
@@ -35,6 +36,13 @@ And leaves where powdery mildew is present:
 Below also are the average and variability images for both kinds of leaves.
 
 From the photographs, it appears that the hypothesis is correct and there is a visual difference. We may therefore consider the hypothesis validated.
+
+
+### Hypothesis 2
+Our Second hypothesis is that the ML model will be just as accurate using grayscale images as colour ones.
+
+### Validation
+To validate this, a second version of the ML model was created where during image augmentation, the color mode was set to grayscale. The results below show that it performed marginally better on the test set than the color version. 
 
 ## The rationale to map the business requirements to the Data Visualisations and ML tasks
 

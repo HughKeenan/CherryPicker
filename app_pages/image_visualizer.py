@@ -12,6 +12,7 @@ import random
 def image_visualizer_body():
     st.write("### Image Visualizer")
     st.info(
+        f""
         f"* The client is interested in conducting a study to visually "
         f"differentiate a healthy leaf from one with powdery mildew.")
     
