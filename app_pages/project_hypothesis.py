@@ -29,3 +29,16 @@ def project_hypothesis_body():
         f" performed marginally better than the original model. We may therefore"
         f" consider this hypothesis validated."
     )
+
+    st.info(
+        f"**Hypothesis 3**\n"
+        f"* We hypothesized that an ML model which used softmax as an activation funstion would"
+        f" perform as well as one that used sigmoid."
+    )
+
+    st.error(
+        f"**Validation**\n"
+        f"* Evaluation of the ML model using the test set shows that it"
+        f" performed several orders of magnitude waorse tha the original. We may therefore"
+        f" not consider this hypothesis validated."
+    )
