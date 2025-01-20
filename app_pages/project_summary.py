@@ -36,7 +36,17 @@ def project_summary_body():
 
     st.success(
         f"**Business Requirements**\n"
-        f"* 1 - The client is interested in conducting a study to visually differentiate "
+        f"* The current method of dealing with this employed by the client is to manually inspect the trees"
+        f" for powdery mildew and treat them when it is found. The ability to do this by use of phtographs"
+        f" would cut down on time and expenses. The specific business requirents are as follows:\n"
+        f"* **Requirement 1** - The client is interested in conducting a study to visually differentiate "
         f"a healthy cherry leaf from one with powdery mildew.\n"
-        f"* 2 - The client is interested in predicting if a cherry leaf is healthy or contains powdery mildew. "
+        f"* In order to develop a system like the proposed one, it must first be established that infected"
+        f" and healthy leaves can be visually differentiated through photographs. To this end we will analyse"
+        f" pictures of infected and healthy leaves to see if there are differences.\n"
+        f"* **Requirement 2** - The client is interested in predicting if a cherry leaf is healthy or contains "
+        f" powdery mildew.\n"
+        f"* Having established there is a visual difference between healthy and infected leaves, a machine"
+        f" learning model will be built using the results of our study to predict whether an image uploaded"
+        f" to it has powdery mildew or not."
         )
