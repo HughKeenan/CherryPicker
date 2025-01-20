@@ -1,8 +1,34 @@
 # Detection of mildew on cherry leaves
 
+## Table of Contents
+1. [Introduction](#introduction)
+2. [Dataset Content](#dataset-content)
+3. [Business Requirements](#business-requirements)
+4. [Hypotheses and validation](#hypotheses)
+    1. [Hypothesis 1](#hypothesis-1)
+    2. [Hypothesis 1 Validation](#hypothesis-1-validation)
+    3. [Hypothesis 2](#hypothesis-2)
+    4. [Hypothesis 2 Validation](#hypothesis-2-validation)
+5. [The rationale to map the business requirements to the Data Visualizations and ML tasks](#the-rationale-to-map-the-business-requirements-to-the-data-visualizations-and-ml-tasks)
+6. [ML business case](#ml-business-case)
+7. [CRISP-DM](#crisp-dm)
+8. [Dashboard Design](#dashboard-design)
+9. [Unfixed Bugs](#unfixed-bugs)
+10. [Deployment](#deployment)
+    1. [Heroku](#heroku)
+11. [Main Data Analysis and Machine Learning Libraries](#main-data-analysis-and-machine-learning-libraries)
+12. [Credits]
+    1. [Content](#content)
+    2. [Media](#media)
+13. [Acknowledgements](#acknowledgements)
+
 ## Introduction
 
-The client, an agri-food business, is facing difficulties with an outbreak of powdery midew on its cherry tree plantations. At present, trees must be inspected manually to determine whether they are disease free or not and then treated if mildew is found. This process is both labour intensive and time consuming. Our proposition is to create a Machine Learning (ML) model that can determine from photographs of cherry leaves whether mildew is present or not, reducing the amount of time taken to determine the status of the tree and enable sick trees to be treated with greater efficiency and accuracy. 
+Cherrypicker is a data science and machine learning (ML) project that uses predictive analytics to tell the difference between 2 different sets of images. The business goal is to assist the client, an agri-food business who is dealing with an infestation of powdery mildew in its cheery tree plantations. 
+
+Currently the client is inspecting trees manually to determine whether they are infected or not and then treated if found to be diseased. This process is both labour intensive and time consuming. We propose the creation of a ML model that can determine from photographs of leaves whether mildew is present, reducing the amount of time taken to determine the status of the tree and enable sick trees to be treated with greater efficiency and accuracy. 
+
+The project is hosted on the streamlit app and a live version may be found [here](https://cherry-picker-7809e87f232b.herokuapp.com/)
 
 ## Dataset Content
 
@@ -25,7 +51,7 @@ Our first hypothesis is that leaves where mildew is present show a pattern of pa
 
 Powdery mildew presents itself as a pattern of white patches on leaves where the fungal infection is present.
 
-### Validation
+### Hypothesis 1 Validation
 
 We intend to validate this by conducting a study of the image data provided by the client. We will create an average image of both healthy and infected leaves. Once compared we hope to be able to distinguish visually between the two using the ML model.
 
@@ -37,11 +63,10 @@ Below also are the average and variability images for both kinds of leaves.
 
 From the photographs, it appears that the hypothesis is correct and there is a visual difference. We may therefore consider the hypothesis validated.
 
-
 ### Hypothesis 2
 Our Second hypothesis is that the ML model will be just as accurate using grayscale images as colour ones.
 
-### Validation
+### Hypothesis 2 Validation
 To validate this, a second version of the ML model was created where during image augmentation, the color mode was set to grayscale. The results below show that it performed marginally better on the test set than the color version. 
 
 ## The rationale to map the business requirements to the Data Visualisations and ML tasks
@@ -208,6 +233,6 @@ The main libraries used were:
 - The photos used on the home and sign-up page are from This Open-Source site.
 - The images used for the gallery page were taken from this other open-source site.
 
-## Acknowledgements (optional)
+## Acknowledgements
 
 - I would like to acknowledge my mentor, Mo Shami, who provided valuable insights and guidance during the project.
