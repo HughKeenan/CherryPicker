@@ -33,23 +33,34 @@ The project is hosted on the streamlit app and a live version may be found [here
 ## Dataset Content
 
 - The dataset is sourced from [Kaggle](https://www.kaggle.com/codeinstitute/cherry-leaves). 
-- The dataset contains over 4 thousand images taken from the client's crop fields. The images show healthy cherry leaves and cherry leaves that have powdery mildew, a fungal disease that affects many plant species. The cherry plantation crop is one of the finest products in their portfolio, and the company is concerned about supplying the market with a compromised quality product.
+- The dataset contains over 4 thousand images taken from the client's cherry tree plantations. The imagesare divided into 2 sets, one of healthy leaves and one of leaves that are infected with powdery mildew. a fungal disease that affects many plant species. The client is concerned that the outbreak may be compromising the quality of their crop, which in turn would have serious ramifications for their business at large. 
+
+[Back to top](#table-of-contents)
 
 ## Business Requirements
 
-The cherry plantation crop from Farmy & Foods is facing a challenge where their cherry plantations have been presenting powdery mildew. Currently, the process is manual verification if a given cherry tree contains powdery mildew. An employee spends around 30 minutes in each tree, taking a few samples of tree leaves and verifying visually if the leaf tree is healthy or has powdery mildew. If there is powdery mildew, the employee applies a specific compound to kill the fungus. The time spent applying this compound is 1 minute. The company has thousands of cherry trees located on multiple farms across the country. As a result, this manual process is not scalable due to the time spent in the manual process inspection.
+This project's main objective is to create a machine learning model that can detect whether a given tree has powdery mildew or not based on photographs uploaded to the dashboard as opposed to manual inspections of each tree, reducing costs in time and labour. This will result in more effective treatment and prevent a decline in crop quality. 
 
-To save time in this process, the IT team suggested an ML system that detects instantly, using a leaf tree image, if it is healthy or has powdery mildew. A similar manual process is in place for other crops for detecting pests, and if this initiative is successful, there is a realistic chance to replicate this project for all other crops. The dataset is a collection of cherry leaf images provided by Farmy & Foods, taken from their crops.
+Key stakeholders for this are Farmy & Foods themselves, and their customers.
 
-- 1 - The client is interested in conducting a study to visually differentiate a healthy cherry leaf from one with powdery mildew.
-- 2 - The client is interested in predicting if a cherry leaf is healthy or contains powdery mildew.
+When considering the business requirements and how to meet them, attention must be paid to the following:
+
+* The ML model produced must be accurate in its predictions of whether a leaf is infected or not
+* The model should be able to handle multiple items concurrently
+* The results produced from uploads must be easy to understand for both technical and non-technical personnel.
+* The model must be able to return a prediction quickly
+
+The specific requirements are as follows:
+
+1. The client is interested in conducting a study to visually differentiate a healthy cherry leaf from one with powdery mildew. This should provide average images of both kinds of leaves, as well as a variability image for each.
+2. The client is interested in predicting if a cherry leaf is healthy or contains powdery mildew. To meet this requirement, a Convolutional Neural Network (CNN) should be developed to classify images as healthy or infected.
+
+[Back to top](#table-of-contents)
 
 ## Hypotheses
 
 ### Hypothesis 1
-Our first hypothesis is that leaves where mildew is present show a pattern of pale spots on the leaf. 
-
-Powdery mildew presents itself as a pattern of white patches on leaves where the fungal infection is present.
+Our first hypothesis is that there is a distinct visual difference between leaves where mildew is present and absent. It is our hypothesis that leaves with powdery mildew show a pattern of pale spots on the leaf. 
 
 ### Hypothesis 1 Validation
 
@@ -64,16 +75,28 @@ Below also are the average and variability images for both kinds of leaves.
 From the photographs, it appears that the hypothesis is correct and there is a visual difference. We may therefore consider the hypothesis validated.
 
 ### Hypothesis 2
-Our Second hypothesis is that the ML model will be just as accurate using grayscale images as colour ones.
+Our second hypothesis is that the ML model will be just as accurate using grayscale images as colour ones.
+
+It is possible that colour images may not be available in future. To prepare for this, we will test whether grayscale images may also be used.
 
 ### Hypothesis 2 Validation
-To validate this, a second version of the ML model was created where during image augmentation, the color mode was set to grayscale. The results below show that it performed marginally better on the test set than the color version. 
+To validate this, a second version of the ML model was created where during image augmentation, the color mode was set to grayscale. 
+
+Below are the results for accuracy and loss when the model was trained using grayscale images:
+
+And the generalised performance on the test set:
+
+The results do not show a loss in accuracy. The model trained using grayscale images in fact performed marginally better than the one trained in colour.
+
+[Back to top](#table-of-contents)
 
 ## The rationale to map the business requirements to the Data Visualisations and ML tasks
 
+As stated above, we must take into consideration the accuracy of our results and the speed at which they are provided. It must also be scalable and easily understood.
+
 - The business requirements are as follows:
 
-1. The client is interested in conducting a study to visually differentiate a healthy cherry leaf from one with powdery mildew.
+**Requirement 1** - The client is interested in conducting a study to visually differentiate a healthy cherry leaf from one with powdery mildew.
 
 This is an issue of classification between healthy leaves and those infected with mildew. We can map the requirements to our data visualisation and ML tasks through [User Stories](https://github.com/users/HughKeenan/projects/8). Please see this link for further detail, but in summary, the following relate to requirement 1: 
 
@@ -86,13 +109,14 @@ The image visualizer page of the dashboard shows the results of our study, inclu
 * As an end user I can view a page detailing the project hypothesis so that I can understand the reasoning behind the developer's analysis
 We hypothesised at the outset that there was a visual difference in healthy and sick leaves, which was validated by our analysis.
 
-2. The client is interested in predicting if a cherry leaf is healthy or contains powdery mildew.
+**Requirement 2** - The client is interested in predicting if a cherry leaf is healthy or contains powdery mildew.
 
 The client wanted a dashboard that would let them upload images of leaves to the site and have an accurate reading of whether they were healthy or sick. This requirement was considered in the below user story:
 
 * As an end user I can upload an image of a leaf so that I can learn if it is diseased or not. 
 The mildew detector page enables the client to do this. They can upload images of the leaves which are then run through the ML model which can accurately predict whether or not powdery mildew is present.
 
+[Back to top](#table-of-contents)
 
 ## ML Business Case
 
