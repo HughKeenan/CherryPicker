@@ -263,24 +263,18 @@ Subsequent versions of the app were successfully run after these changes and per
 
 *Business Requirements Testing*
 
-|--|--|--|--|
-|Dashboard item|Test conducted|Expected result|Actual result|
-
 **Requirement 1** - The client is interested in conducting a study to visually differentiate a healthy cherry leaf from one with powdery mildew.
-
-* As a data scientist I can collect & prepare data so that it can be used for analysis & training ML models.
-    * To conduct an effective study, we must first acquire relevant data. The dataset acquired through Kaggle had to be downloaded, and then examined to ensure it contained no non-relevant data, for example as part of this process, a notebook was ran to remove any non-image files present in the dataset.
 
 * As an end user, I can review a page of project findings so that I can receive more detailed information on what conclusions the development team came to.
 
-|--|--|--|--|
-|Dashboard item|Test conducted|Expected result|Actual result|
-|Navbar|Selecting button for Image Visualiser|Image Visualiser page opens||
-|Button for difference between average & variability image|Click button|Display average & variability image for healthy & infected leaves||
-|Button for difference between average healthy & infect leaves|Click button|Display both average images & difference image for average healthy & infect leaves||
-|Button for image montage|Click button|Display dropdown for montage creation||
-|Dropdown option for healthy leaves|Select & click button to create montage|See montage of healthy leaves||
-|Dropdown option for infected leaves|Select & click button to create montage|See montage of infected leaves||
+| -- | -- | -- | -- |
+| Dashboard item | Test conducted | Expected result | Actual result |
+| Navbar | Selecting button for Image Visualiser | Image Visualiser page opens |  |
+| Button for difference between average & variability image | Click button | Display average & variability image for healthy & infected leaves |  |
+| Button for difference between average healthy & infect leaves | Click button | Display both average images & difference image for average healthy & infect leaves |  |
+| Button for image montage | Click button | Display dropdown for montage creation |  |
+| Dropdown option for healthy leaves | Select & click button to create montage | See montage of healthy leaves|  |
+| Dropdown option for infected leaves | Select & click button to create montage | See montage of infected leaves|  |
 
 * As an end user I can view a page detailing the project hypothesis so that I can understand the reasoning behind the developer's analysis
 
