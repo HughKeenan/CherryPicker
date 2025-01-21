@@ -284,9 +284,9 @@ Subsequent versions of the app were successfully run after these changes and per
 
 * As an end user I can view a page detailing the project hypothesis so that I can understand the reasoning behind the developer's analysis
 
-|--|--|--|--|
-|Dashboard item|Test conducted|Expected result|Actual result|
-|Navbar|Selecting button for Project Hypotheses|Image Visualiser page opens||
+| -- | -- | -- | -- |
+| Dashboard item | Test conducted | Expected result | Actual result |
+| Navbar | Selecting button for Project Hypotheses | Image Visualiser page opens |  |
 
 **Requirement 2** - The client is interested in predicting if a cherry leaf is healthy or contains powdery mildew.
 
@@ -294,15 +294,15 @@ The client wanted a dashboard that would let them upload images of leaves to the
 
 * As an end user I can upload an image of a leaf so that I can learn if it is diseased or not. 
 
-|--|--|--|--|
-|Dashboard item|Test conducted|Expected result|Actual result|
-|Navbar|Selecting button for Mildew Detector|Mildew Detector page opens||
-|Link to Kaggle on Mildew Detector page|Click on link|Kaggle page for dataset opens||
-|Box for uploading data|Drag & drop leaf image into box|See report displaying analysis of the image||
-|Box for uploading data|Use browse files button|file explorer opens to enable selection||
-|Box for uploading data|Upload image from file explorer|See report displaying analysis of the image||
-|Box for uploading data|Repeat prior two items for multiple images|See report displaying analysis of all the images||
-|Image analysis report|Click button to download csv report of analysis|report is downloaded containing the results shown on dashboard||
+| -- | -- | -- | -- |
+| Dashboard item | Test conducted | Expected result | Actual result |
+| Navbar | Selecting button for Mildew Detector |Mildew Detector page opens |  |
+| Link to Kaggle on Mildew Detector page | Click on link |Kaggle page for dataset opens |  |
+| Box for uploading data | Drag & drop leaf image into box | See report displaying analysis of the image |  |
+| Box for uploading data | Use browse files button | File explorer opens to enable selection |  |
+| Box for uploading data | Upload image from file explorer | See report displaying analysis of the image |  |
+| Box for uploading data | Repeat prior two items for multiple images | See report displaying analysis of all the images|  |
+| Image analysis report | Click button to download csv report of analysis | Report is downloaded containing the results shown on dashboard|  |
 
 ### Python Validation
 The code in this project was validated using a PEP8 linter.
