@@ -1,5 +1,7 @@
 # Detection of mildew on cherry leaves
 
+![Responsivity image](/assets/images/dashboard_responsivity.png)
+
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Dataset Content](#dataset-content)
@@ -73,9 +75,17 @@ We intend to validate this by conducting a study of the image data provided by t
 
 The below images show a selection of healthy leaves:
 
+![Healthy Leaves](/assets/images/healthy_leaves.png)
+
 And leaves where powdery mildew is present:
 
+![Infected Leaves](/assets/images/infected_leaves.png)
+
 Below also are the average and variability images for both kinds of leaves.
+
+![Average & variability for healthy leaves](/assets/images/healthy_average.png)
+
+![Average & variability for infected leaves](/assets/images/infected_average.png)
 
 From the photographs, it appears that the hypothesis is correct and there is a visual difference. We may therefore consider the hypothesis validated.
 
@@ -88,6 +98,10 @@ It is possible that colour images may not be available in future. To prepare for
 To validate this, a second version of the ML model was created where during image augmentation, the color mode was set to grayscale. 
 
 Below are the results for accuracy and loss when the model was trained using grayscale images:
+
+![Accuracy for model trained on grayscale images](/outputs/v2/model_training_acc.png)
+
+![Loss for model trained on grayscale images](/outputs/v2/model_training_losses.png)
 
 And the generalised performance on the test set:
 
@@ -143,7 +157,7 @@ The data is provided by the user and downloaded from Kaggle. It is split into tr
 
 The dashboard was made using Streamlit and has been designed with clarity and ease of use in mind. It contains the following pages:
 
-1. Dashboard information 
+1. Project Summary 
 
 * General Information
 * Dataset Information
@@ -156,7 +170,7 @@ The general information provided is there to inform users about the nature of po
 
 It also provides more specific information concerning the dataset and provides a link to where it might be downloaded, as well as a summary of the buiness requirements.
 
-2. Project Findings 
+2. Image Visualizer 
 
 * Business requirement 1
 * Checkbox 1 - Difference between average and variability image
@@ -179,7 +193,7 @@ This page answers business requirement 2: the client is interested in predicting
 * Project Hypothesis
 * Validation
 
-This page displays the project hypothesis and  explaines the method by which it was validated
+This page displays the project hypotheses and explaines the method by which they were validated
 
 5. Performance Metrics 
 
@@ -267,8 +281,8 @@ Subsequent versions of the app were successfully run after these changes and per
 
 * As an end user, I can review a page of project findings so that I can receive more detailed information on what conclusions the development team came to.
 
-| -- | -- | -- | -- |
 | Dashboard item | Test conducted | Expected result | Actual result |
+| -- | -- | -- | -- |
 | Navbar | Selecting button for Image Visualiser | Image Visualiser page opens | Success |
 | Button for difference between average & variability image | Click button | Display average & variability image for healthy & infected leaves | Success |
 | Button for difference between average healthy & infect leaves | Click button | Display both average images & difference image for average healthy & infect leaves | Success |
@@ -278,8 +292,8 @@ Subsequent versions of the app were successfully run after these changes and per
 
 * As an end user I can view a page detailing the project hypothesis so that I can understand the reasoning behind the developer's analysis
 
-| -- | -- | -- | -- |
 | Dashboard item | Test conducted | Expected result | Actual result |
+| -- | -- | -- | -- |
 | Navbar | Selecting button for Project Hypotheses | Project Hypothesis page opens | Success |
 
 **Requirement 2** - The client is interested in predicting if a cherry leaf is healthy or contains powdery mildew.
@@ -288,8 +302,8 @@ The client wanted a dashboard that would let them upload images of leaves to the
 
 * As an end user I can upload an image of a leaf so that I can learn if it is diseased or not. 
 
-| -- | -- | -- | -- |
 | Dashboard item | Test conducted | Expected result | Actual result |
+| -- | -- | -- | -- |
 | Navbar | Selecting button for Mildew Detector |Mildew Detector page opens | Success |
 | Link to Kaggle on Mildew Detector page | Click on link |Kaggle page for dataset opens | Success |
 | Box for uploading data | Drag & drop leaf image into box | See report displaying analysis of the image | Success |
