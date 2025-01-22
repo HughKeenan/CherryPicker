@@ -269,18 +269,18 @@ Subsequent versions of the app were successfully run after these changes and per
 
 | -- | -- | -- | -- |
 | Dashboard item | Test conducted | Expected result | Actual result |
-| Navbar | Selecting button for Image Visualiser | Image Visualiser page opens |  |
-| Button for difference between average & variability image | Click button | Display average & variability image for healthy & infected leaves |  |
-| Button for difference between average healthy & infect leaves | Click button | Display both average images & difference image for average healthy & infect leaves |  |
-| Button for image montage | Click button | Display dropdown for montage creation |  |
-| Dropdown option for healthy leaves | Select & click button to create montage | See montage of healthy leaves|  |
-| Dropdown option for infected leaves | Select & click button to create montage | See montage of infected leaves|  |
+| Navbar | Selecting button for Image Visualiser | Image Visualiser page opens | Success |
+| Button for difference between average & variability image | Click button | Display average & variability image for healthy & infected leaves | Success |
+| Button for difference between average healthy & infect leaves | Click button | Display both average images & difference image for average healthy & infect leaves | Success |
+| Button for image montage | Click button | Display dropdown for montage creation | Success |
+| Dropdown option for healthy leaves | Select & click button to create montage | See montage of healthy leaves| Success |
+| Dropdown option for infected leaves | Select & click button to create montage | See montage of infected leaves| Success |
 
 * As an end user I can view a page detailing the project hypothesis so that I can understand the reasoning behind the developer's analysis
 
 | -- | -- | -- | -- |
 | Dashboard item | Test conducted | Expected result | Actual result |
-| Navbar | Selecting button for Project Hypotheses | Image Visualiser page opens |  |
+| Navbar | Selecting button for Project Hypotheses | Project Hypothesis page opens | Success |
 
 **Requirement 2** - The client is interested in predicting if a cherry leaf is healthy or contains powdery mildew.
 
@@ -290,13 +290,13 @@ The client wanted a dashboard that would let them upload images of leaves to the
 
 | -- | -- | -- | -- |
 | Dashboard item | Test conducted | Expected result | Actual result |
-| Navbar | Selecting button for Mildew Detector |Mildew Detector page opens |  |
-| Link to Kaggle on Mildew Detector page | Click on link |Kaggle page for dataset opens |  |
-| Box for uploading data | Drag & drop leaf image into box | See report displaying analysis of the image |  |
-| Box for uploading data | Use browse files button | File explorer opens to enable selection |  |
-| Box for uploading data | Upload image from file explorer | See report displaying analysis of the image |  |
+| Navbar | Selecting button for Mildew Detector |Mildew Detector page opens | Success |
+| Link to Kaggle on Mildew Detector page | Click on link |Kaggle page for dataset opens | Success |
+| Box for uploading data | Drag & drop leaf image into box | See report displaying analysis of the image | Success |
+| Box for uploading data | Use browse files button | File explorer opens to enable selection | Success |
+| Box for uploading data | Upload image from file explorer | See report displaying analysis of the image | Success |
 | Box for uploading data | Repeat prior two items for multiple images | See report displaying analysis of all the images|  |
-| Image analysis report | Click button to download csv report of analysis | Report is downloaded containing the results shown on dashboard|  |
+| Image analysis report | Click button to download csv report of analysis | Report is downloaded containing the results shown on dashboard| Success |
 
 ### Python Validation
 The code in this project was validated using a PEP8 linter.
