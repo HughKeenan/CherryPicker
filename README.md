@@ -105,7 +105,9 @@ Below are the results for accuracy and loss when the model was trained using gra
 
 And the generalised performance on the test set:
 
-The results do not show a loss in accuracy. The model trained using grayscale images in fact performed marginally better than the one trained in colour.
+![Performance of model trained on grayscale images](/assets/images/grayscale_performance.png)
+
+The results do not show a loss in accuracy. The model trained using grayscale images in fact performed marginally better than the one trained in colour. We may consider this hypothesis validated.
 
 [Back to top](#table-of-contents)
 
