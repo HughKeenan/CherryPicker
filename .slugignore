@@ -7,6 +7,8 @@ jupyter_notebooks/
 
 hypotheses_attachments/
 
+assets/
+
 outputs/v2/
 
 app_pages/__pycache__/*
