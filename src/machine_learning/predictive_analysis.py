@@ -5,6 +5,7 @@ import plotly.express as px
 from tensorflow.keras.models import load_model
 from PIL import Image
 from src.data_management import load_pkl_file
+import random
 
 
 def plot_predictions_probabilities(pred_proba, pred_class):
@@ -30,7 +31,10 @@ def plot_predictions_probabilities(pred_proba, pred_class):
         y=prob_per_class['Probability'],
         range_y=[0, 1],
         width=600, height=300, template='seaborn')
-    st.plotly_chart(fig)
+    
+    keys = [x for x in range(100000)]
+
+    st.plotly_chart(fig, key=random.sample(keys, 1))
 
 
 def resize_input_image(img, version):
