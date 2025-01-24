@@ -10,7 +10,8 @@ import random
 
 def plot_predictions_probabilities(pred_proba, pred_class):
     """
-    Plot prediction probability results
+    Plot probability results for
+    prediction of image
     """
 
     prob_per_class = pd.DataFrame(
@@ -31,7 +32,7 @@ def plot_predictions_probabilities(pred_proba, pred_class):
         y=prob_per_class['Probability'],
         range_y=[0, 1],
         width=600, height=300, template='seaborn')
-    
+
     keys = [x for x in range(100000)]
 
     st.plotly_chart(fig, key=random.sample(keys, 1))
@@ -39,7 +40,7 @@ def plot_predictions_probabilities(pred_proba, pred_class):
 
 def resize_input_image(img, version):
     """
-    Reshape image to average image size
+    Reshape size of image to average image size
     """
     image_shape = load_pkl_file(file_path=f"outputs/{version}/image_shape.pkl")
     img_resized = img.resize((image_shape[1], image_shape[0]), Image.LANCZOS)
