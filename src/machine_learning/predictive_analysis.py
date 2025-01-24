@@ -8,7 +8,7 @@ from src.data_management import load_pkl_file
 import random
 
 
-def plot_predictions_probabilities(pred_proba, pred_class):
+def predictions_probabilities(pred_proba, pred_class):
     """
     Plot probability results for
     prediction of image
@@ -42,6 +42,7 @@ def resize_input_image(img, version):
     """
     Reshape size of image to average image size
     """
+
     image_shape = load_pkl_file(file_path=f"outputs/{version}/image_shape.pkl")
     img_resized = img.resize((image_shape[1], image_shape[0]), Image.LANCZOS)
     my_image = np.expand_dims(img_resized, axis=0)/255
@@ -51,7 +52,7 @@ def resize_input_image(img, version):
 
 def load_model_and_predict(my_image, version):
     """
-    Load and perform ML prediction over live images
+    Perform ML prediction on live images
     """
 
     model = load_model(f"outputs/{version}/powdery_mildew_model.h5")
