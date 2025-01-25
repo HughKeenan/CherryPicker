@@ -239,10 +239,15 @@ There are no unfixed bugs
 - The project was deployed to Heroku using the following steps.
 
 1. Log in to Heroku and click on New in the top left corner. Select create an App from the dropdown.
+![Heroku homepage](/assets/images/heroku_homepage.png)
 2. Give the app a name(note: this must be unique) and choose a location, either Europe or the USA, depending on where you are. Click on create App
+![Page to name and create a new app](/assets/images/create_app.png)
 3. Navigate to the Deploy tab at the stop of the page, scroll to the Deployment Method section and select GitHub as the deployment method.
+![Choose deployment method](/assets/images/deployment_method.png)
 4. Enter the name of your repository and search. Once it comes up, click on the connect button beside the name.
+![Search for repository](/assets/images/repo_name.png)
 5. From the option below the location to search for repos, choose to deploy the main branch from the dropdown if it is not selected already. You may choose here to enable automatic deploys, which will build a new version of the app on Heroku every time you push to GitHub. Select Deploy Branch.
+![Choose branch to deploy](/assets/images/deploy_branch.png)
 6. As the app builds, pay attention to the build log on screen and watch out for any errors, as any problems with deployment will be displayed here.
 7. The slug size being too large is a common issue, as the max size for deployment is 500MB. If this occurs, you must reduce the size of the file. You can do this by adding large files such as the README, which are not required to run the app to the .slugignore, or by changing the versions of some of the software you are using.
 
