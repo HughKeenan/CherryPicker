@@ -16,6 +16,7 @@ def mildew_detector_body():
     Produce results of analysis on uploaded image
     """
     st.info(
+        f"* This page will examine Business Requirement 2.\n"
         f"* The client is interested in telling whether a "
         f"leaf has powdery mildew "
         f"or not."
