@@ -123,9 +123,10 @@ This is an issue of classification between healthy leaves and those infected wit
 
 * As a data scientist I can collect & prepare data so that it can be used for analysis & training ML models.
     * To conduct an effective study, we must first acquire relevant data. The dataset acquired through Kaggle had to be downloaded, and then examined to ensure it contained no non-relevant data, for example as part of this process, a notebook was ran to remove any non-image files present in the dataset.
+    * The images were then converted to arrays and the average was of both kinds was plotted, along with the variability of each. They were then compared together with an image showing the differences in average and variability between both.
 
 * As an end user, I can review a page of project findings so that I can receive more detailed information on what conclusions the development team came to.
-    * The image visualizer page of the dashboard shows the results of our study, including the average images for healthy and sick leaves, and the variability in images for both. The study found that there are visual differences between them. 
+    * The image visualizer page of the dashboard shows the results of our study, including the average images for healthy and sick leaves, and the variability in images for both. The study found that there are visual differences between them. An image montage is also available for either kind of leaf if the user wishes to see more examples. 
 
 * As an end user I can view a page detailing the project hypothesis so that I can understand the reasoning behind the developer's analysis
     * We hypothesised at the outset that there was a visual difference in healthy and sick leaves, which was validated by our analysis.
@@ -134,8 +135,11 @@ This is an issue of classification between healthy leaves and those infected wit
 
 The client wanted a dashboard that would let them upload images of leaves to the site and have an accurate reading of whether they were healthy or sick. This requirement was considered in the below user story:
 
+* As a data scientist, I can create a machine learning model to make predictions on uploaded images
+    * We trained a machine learning model to recognise the difference between healthy & diseased leaves. This was done using a convolutional neural network, making use of different layers and activation functions to classify the images. This is available on the dashboard in the mildew detector page.
+
 * As an end user I can upload an image of a leaf so that I can learn if it is diseased or not. 
-    * The mildew detector page enables the client to do this. They can upload images of the leaves which are then run through the ML model which can accurately predict whether or not powdery mildew is present.
+    * The mildew detector page enables the client to do this. They can upload images of the leaves which are then run through the ML model which can accurately predict whether or not powdery mildew is present.    
 
 [Back to top](#table-of-contents)
 
@@ -340,7 +344,19 @@ The client wanted a dashboard that would let them upload images of leaves to the
 | Image analysis report | Click button to download csv report of analysis | Report is downloaded containing the results shown on dashboard| Success |
 
 ### Python Validation
-The code in this project was validated using a PEP8 linter.
+The code in the Jupyter notebooks was validated using pycodestyle, which was installed through the following command:
+`pip install pep8 pycodestyle pycodestyle_magic`.
+
+It was implemented using a cell at the top of each page containing the following:
+
+```
+%load_ext pycodestyle_magic
+%pycodestyle_on
+```
+
+A copy was made of each notebook, which was run with pycodestyle enabled, any errors were then corrected in the corresponding cell in the primary notebook.
+
+The python code for the app pages and files for data management and predictive analysis was validated using a [PEP8 linter](#https://pep8ci.herokuapp.com/#).
 
 [Back to top](#table-of-contents)
 
@@ -352,15 +368,10 @@ The code in this project was validated using a PEP8 linter.
 - The dataset was created by Code institute and taken from [Kaggle](https://www.kaggle.com/codeinstitute/cherry-leaves)
 - The Malaria Walkthrough Project from Code Institute was used as a guide when assembling this project.
 
-### Media
-
-- The photos used on the home and sign-up page are from This Open-Source site.
-- The images used for the gallery page were taken from this other open-source site.
-
 [Back to top](#table-of-contents)
 
 ## Acknowledgements
 
-- I would like to acknowledge my mentor, Mo Shami, who provided valuable insights and guidance during the project.
+- I would like to acknowledge my mentor, Mo Shami, who provided valuable insights and guidance during the project. I would also like to thank the Slack community and Neil McEwen, who helped with technical issues.
 
 [Back to top](#table-of-contents)
