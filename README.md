@@ -95,7 +95,7 @@ Our second hypothesis is that the ML model will be just as accurate using graysc
 It is possible that colour images may not be available in future. To prepare for this, we will test whether grayscale images may also be used.
 
 ### Hypothesis 2 Validation
-To validate this, a second version of the ML model was created where during image augmentation, the color mode was set to grayscale. 
+To validate this, a second version of the ML model was created where during image augmentation, the color mode was set to grayscale when augmenting data on each set. 
 
 Below are the results for accuracy and loss when the model was trained using grayscale images:
 
@@ -108,6 +108,26 @@ And the generalised performance on the test set:
 ![Performance of model trained on grayscale images](/assets/images/grayscale_performance.png)
 
 The results do not show a loss in accuracy. The model trained using grayscale images in fact performed marginally better than the one trained in colour. We may consider this hypothesis validated.
+
+### Hypothesis 3
+
+Our third hypothesis is that ML model accuracy is affected by the activation function used in the output layer. Our first study used a sigmoid activation function and binary classification to determine whether a leaf was healthy or diseased. We propose instead to use a SoftMax activation function, which operates as a multi-class classification function. 
+
+### Hypothesis 3 Validation
+
+We validated this by creating a final version of the ML model. This time, when augmenting the dataset the class mode was changed to categorical and the activation function in the ML model was changed to softmax.
+
+Below are the results for accuracy and loss when the model was trained using grayscale images:
+
+![Accuracy for model using softmax](/outputs/v3/model_training_acc.png)
+
+![Loss for model using softmax](/outputs/v3/model_training_losses.png)
+
+And the generalised performance on the test set:
+
+![Performance of model using softmax](/assets/images/performance_on_test_set.png)
+
+The data suggests that the model using softmax performed no worse than the one using sigmoid. However, during testing it proved unable to correctly identify leaves. For this reason we would not recommend using softmax.
 
 [Back to top](#table-of-contents)
 
