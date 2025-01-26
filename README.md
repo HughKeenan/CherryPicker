@@ -135,7 +135,6 @@ And the generalised performance on the test set:
 ![Performance of model using softmax](/assets/images/performance_on_test_set.png)
 
 We can then compare to the sigmoid results:
-When compared to the results for the model trained in colour images, we see a clear loss in accuracy.
 
 ![Accuracy for model using sigmoid function](/outputs/v1/model_training_acc.png)
 
