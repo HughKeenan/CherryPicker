@@ -10,6 +10,7 @@ hypotheses_attachments/
 assets/
 
 outputs/v2/
+outputs/v3/
 
 app_pages/__pycache__/*
 __pycache__/
