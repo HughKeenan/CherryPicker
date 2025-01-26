@@ -25,7 +25,7 @@
 13. [Testing](#testing)
     1. [Manual Testing](#manual-testing)
     2. [Python Validation](#python-validation)
-14. [Credits]
+14. [Credits](#credits)
     1. [Content](#content)
     2. [Media](#media)
 15. [Acknowledgements](#acknowledgements)
@@ -304,6 +304,7 @@ The main libraries used were:
 * plotly 5.10.0 - used for plotting results of ML model training
 * Pillow 10.0.1 - used to adjust images
 * streamlit 1.40.2 - used to create the dashboard's interface
+* joblib 1.4.2 - used for runnning tasks in parallel
 * scikit-learn 1.3.1 - used for model evaluation
 * tensorflow-cpu 2.16.1 - used for model creation
 * keras 3.0.0 - used to set hyperparameters for the model
