@@ -23,7 +23,7 @@ def project_summary_body():
         f"* The client is experiencing an outbreak of this disease "
         f"in several of its cherry tree plantations. "
         f"The current method of manually inspecting the trees has been "
-        f"deemed time-inefficient."
+        f"deemed time-inefficient. "
         f"The client has instead requested development of a Machine Learning "
         f"(ML) model "
         f"that will be able to predict based on uploaded photographs "
@@ -36,12 +36,14 @@ def project_summary_body():
         f"of leaves taken from their cherry trees (2,104 each for both "
         f"healthy and infected leaves).\n"
         f"* It is available to download from "
-        f"[Kaggle](https://www.kaggle.com/datasets/codeinstitute/cherry-leaves)"
+        f"[Kaggle]"
+        f"(https://www.kaggle.com/datasets/codeinstitute/cherry-leaves)"
     )
 
     st.write(
         f"* For more information, please see the "
-        f"[Project README file](https://https://github.com/HughKeenan/CherryPicker/blob/main/README.md).")
+        f"[Project README file]"
+        f"(https://github.com/HughKeenan/CherryPicker/blob/main/README.md).")
 
     st.success(
         f"**Business Requirements**\n"

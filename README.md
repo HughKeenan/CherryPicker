@@ -13,25 +13,24 @@
     4. [Hypothesis 2 Validation](#hypothesis-2-validation)
 5. [The rationale to map the business requirements to the Data Visualizations and ML tasks](#the-rationale-to-map-the-business-requirements-to-the-data-visualizations-and-ml-tasks)
 6. [ML business case](#ml-business-case)
-7. [CRISP-DM](#crisp-dm)
-8. [Dashboard Design](#dashboard-design)
-9. [Unfixed Bugs](#unfixed-bugs)
-10. [Deployment](#deployment)
+7. [Dashboard Design](#dashboard-design)
+8. [Unfixed Bugs](#unfixed-bugs)
+9. [Deployment](#deployment)
     1. [Heroku](#heroku)
-11. [Main Data Analysis and Machine Learning Libraries](#main-data-analysis-and-machine-learning-libraries)
-12. [Other technologies used](#other-technologies-used)
-13. [Issues](#issues)
-14. [Testing](#testing)
+10. [Main Data Analysis and Machine Learning Libraries](#main-data-analysis-and-machine-learning-libraries)
+11. [Other technologies used](#other-technologies-used)
+12. [Issues](#issues)
+13. [Testing](#testing)
     1. [Manual Testing](#manual-testing)
     2. [Python Validation](#python-validation)
-15. [Credits]
+14. [Credits]
     1. [Content](#content)
     2. [Media](#media)
-16. [Acknowledgements](#acknowledgements)
+15. [Acknowledgements](#acknowledgements)
 
 ## Introduction
 
-Cherrypicker is a data science and machine learning (ML) project that uses predictive analytics to tell the difference between 2 different sets of images. The business goal is to assist the client, an agri-food business who is dealing with an infestation of powdery mildew in its cheery tree plantations. 
+Cherrypicker is a data science and machine learning (ML) project that uses predictive analytics to tell the difference between 2 different sets of images. The business goal is to assist the client, an agri-food business who is dealing with an infestation of powdery mildew in its cherry tree plantations. 
 
 Currently the client is inspecting trees manually to determine whether they are infected or not and then treated if found to be diseased. This process is both labour intensive and time consuming. We propose the creation of a ML model that can determine from photographs of leaves whether mildew is present, reducing the amount of time taken to determine the status of the tree and enable sick trees to be treated with greater efficiency and accuracy. 
 
@@ -40,7 +39,7 @@ The project is hosted on the streamlit app and a live version may be found [here
 ## Dataset Content
 
 - The dataset is sourced from [Kaggle](https://www.kaggle.com/codeinstitute/cherry-leaves). 
-- The dataset contains over 4 thousand images taken from the client's cherry tree plantations. The imagesare divided into 2 sets, one of healthy leaves and one of leaves that are infected with powdery mildew. a fungal disease that affects many plant species. The client is concerned that the outbreak may be compromising the quality of their crop, which in turn would have serious ramifications for their business at large. 
+- The dataset contains over 4 thousand images taken from the client's cherry tree plantations. The images are divided into 2 sets, one of healthy leaves and one of leaves that are infected with powdery mildew. a fungal disease that affects many plant species. The client is concerned that the outbreak may be compromising the quality of their crop, which in turn would have serious ramifications for their business at large. 
 
 [Back to top](#table-of-contents)
 
@@ -81,13 +80,13 @@ And leaves where powdery mildew is present:
 
 ![Infected Leaves](/assets/images/infected_leaves.png)
 
-Below also are the average and variability images for both kinds of leaves.
+To create the average and variability images that will serve as the basis for our validation, images such as those above were taken and loaded into an array with their shape, once found. A function was then created to plot the mean and variability of the data in this. Below also are the average and variability images for both kinds of leaves.
 
 ![Average & variability for healthy leaves](/assets/images/healthy_average.png)
 
 ![Average & variability for infected leaves](/assets/images/infected_average.png)
 
-From the photographs, it appears that the hypothesis is correct and there is a visual difference. We may therefore consider the hypothesis validated.
+From the photographs and results of the analysis, it appears that the hypothesis is correct and there is a visual difference. We may therefore consider the hypothesis validated.
 
 ### Hypothesis 2
 Our second hypothesis is that the ML model will be just as accurate using grayscale images as colour ones.
@@ -107,13 +106,13 @@ And the generalised performance on the test set:
 
 ![Performance of model trained on grayscale images](/assets/images/grayscale_performance_on_test_set.png)
 
-When compared to the results for the model trained in colour images, we see a clear loss in accuracy.
+When compared to the results for the model trained in colour images, we see a loss in accuracy.
 
 ![Accuracy for model trained on colour images](/outputs/v1/model_training_acc.png)
 
 ![Loss for model trained on colour images](/outputs/v1/model_training_losses.png)
 
-For this reason, we may not consider this hypothesis validated, and we do not recommend using grayscale images to train ML models
+For this reason, we may not consider this hypothesis validated, and we do not recommend using grayscale images to train ML models.
 
 ### Hypothesis 3
 
@@ -387,7 +386,7 @@ It was implemented using a cell at the top of each page containing the following
 
 A copy was made of each notebook, which was run with pycodestyle enabled, any errors were then corrected in the corresponding cell in the primary notebook.
 
-The python code for the app pages and files for data management and predictive analysis was validated using a [PEP8 linter](#https://pep8ci.herokuapp.com/#).
+The python code for the app pages and files for data management and predictive analysis was validated using a [PEP8 linter](https://pep8ci.herokuapp.com/).
 
 [Back to top](#table-of-contents)
 
@@ -398,6 +397,10 @@ The python code for the app pages and files for data management and predictive a
 - Information on powdery midlew was taken from https://en.wikipedia.org/wiki/Powdery_mildew
 - The dataset was created by Code institute and taken from [Kaggle](https://www.kaggle.com/codeinstitute/cherry-leaves)
 - The Malaria Walkthrough Project from Code Institute was used as a guide when assembling this project.
+
+### Media
+
+- the favicon was obtained here: https://streamlit-emoji-shortcodes-streamlit-app-gwckff.streamlit.app/
 
 [Back to top](#table-of-contents)
 
