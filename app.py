@@ -15,7 +15,7 @@ app = MultiPage(app_name="Cherry Picker")
 app.add_page("Project Summary", project_summary_body)
 app.add_page("Image Visualizer", image_visualizer_body)
 app.add_page("Mildew Detector", mildew_detector_body)
-app.add_page("Project Hypothesis", project_hypothesis_body)
+app.add_page("Project Hypotheses", project_hypothesis_body)
 app.add_page("ML Performance Metrics", ml_performance_metrics)
 
 app.run()

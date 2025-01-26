@@ -30,11 +30,28 @@ def project_hypothesis_body():
         f"as accurate as one trained using color images."
     )
 
+    st.error(
+        f"**Validation**\n"
+        f"* The accuracy and loss results produced by "
+        f"this model shows that it did not perform as "
+        f"well as the model trained with colour images. "
+        f"model. We may therefore not"
+        f" consider this hypothesis validated."
+    )
+
+    st.info(
+        f"**Hypothesis 3**\n"
+        f"* We hypothesized that an ML model which used "
+        f"softmax as its activation function on the output " 
+        f"layer would be less accurate than one which used "
+        f"sigmoid."
+    )
+
     st.success(
         f"**Validation**\n"
-        f"* Evaluation of the ML model using the test "
-        f"set shows that it"
-        f" performed marginally better than the original "
-        f"model. We may therefore"
-        f" consider this hypothesis validated."
+        f"* When the model trained using softmax was "
+        f"trained and deployed ot the dashboard, it "
+        f"proved unable to accurately predict whether "
+        f"a leaf was infected or not. We may therefore "
+        f"consider the hypothesis validated."   
     )
