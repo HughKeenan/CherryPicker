@@ -10,12 +10,10 @@ import random
 
 
 def image_visualizer_body():
-
     """
     Display average and variability images
     for both kinds of leaves
     """
-
     st.write("### Image Visualizer")
     st.info(
       f"* This page will examine Business Requirement 1.\n"
