@@ -122,7 +122,7 @@ Our third hypothesis is that ML model accuracy is affected by the activation fun
 
 We validated this by creating a final version of the ML model. This time, when augmenting the dataset the class mode was changed to categorical and the activation function in the ML model was changed to softmax.
 
-Below are the results for accuracy and loss when the model was trained using grayscale images:
+Below are the results for accuracy and loss when the model wthat used softmax as its activation function:
 
 ![Accuracy for model using softmax](/outputs/v3/model_training_acc.png)
 
