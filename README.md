@@ -11,6 +11,8 @@
     2. [Hypothesis 1 Validation](#hypothesis-1-validation)
     3. [Hypothesis 2](#hypothesis-2)
     4. [Hypothesis 2 Validation](#hypothesis-2-validation)
+    5. [Hypothesis 3](#hypothesis-3)
+    6. [Hypothesis 3 Validation](#hypothesis-3-validation)
 5. [The rationale to map the business requirements to the Data Visualisations and ML tasks](#the-rationale-to-map-the-business-requirements-to-the-Data-Visualisations-and-ML-tasks)
 6. [ML business case](#ml-business-case)
 7. [Dashboard Design](#dashboard-design)
